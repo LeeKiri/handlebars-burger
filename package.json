@@ -1,0 +1,25 @@
+{
+  "name": "handlebars-burger",
+  "version": "1.0.0",
+  "description": "This project uses node, express, Heroku and handlebars to make a restaurant app that lets users input the names of burgers they'd like to eat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeeKiri/handlebars-burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeeKiri/handlebars-burger/issues"
+  },
+  "homepage": "https://github.com/LeeKiri/handlebars-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql": "^2.18.1"
+  }
+}
