@@ -1,2 +1,48 @@
-{{!-- set up template that handle bars will render onto--}}
-{{!-- create button that will submit user input into db --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{!-- <a class="navbar-brand justfi" href="#">Burgers</a> --}}
+<h1 class="text-center">Burgers!</h1>
+</nav>
+<div class="container">
+    <div class="row">
+
+        <div class="col-4" id="Left">
+            <h4>Burgers to Devour</h4>
+
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>{{this.burger_name}}</li>
+                <button type="button" class="btn btn-info btn-sm">Devour it!</button>
+                {{/unless}}
+                {{/each}}
+
+            </ul>
+
+        </div>
+
+        <div class="col-4" id="middle">
+            <h4>Add a Burger</h4>
+            <img src="../public/assets/burger.jpg" alt="veggie burger" width="500">
+            <form id="create-form">
+                <div class="form-group">
+                    <label for="bur">Burger Name:</label>
+                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger" placeholder="Enter burger">
+
+                </div>
+                <button type="button" class="btn btn-info btn-sm">Add a Burger</button>
+            </form>
+        </div>
+
+        <div class="col-4" id="Right">
+            <h4>Devoured Burgers!</h4>
+
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>{{this.burger_name}}</li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

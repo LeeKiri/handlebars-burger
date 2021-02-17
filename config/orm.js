@@ -1,11 +1,17 @@
-const connection = require('./connection.js');
+const connection = require("./connection.js");
 
 const orm = {
-    selectAll(, cb);
+  selectAll(table, cb) {
+    const queryString = `SELECT * FROM ??`;
+    connection.query(queryString, [table], (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  },
 
-    insertOne(, cb);
+  // insertOne(, cb)
 
-    updateOne(, cb);
-}
+  // updateOne(, cb)
+};
 
 module.exports = orm;

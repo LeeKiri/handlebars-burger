@@ -1,0 +1,13 @@
+.text-center{
+    text-align: center !important;
+};
+li{
+    font-size: 100px;
+};
+body{
+    background-color: cadetblue;
+};
+nav{
+    margin-bottom: 50px;
+}
+
