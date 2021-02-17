@@ -1,13 +1,32 @@
-.text-center{
-    text-align: center !important;
-};
 li{
-    font-size: 100px;
-};
-body{
-    background-color: cadetblue;
-};
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px rgb(53, 52, 52);
+
+}
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("./grey.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 nav{
     margin-bottom: 50px;
 }
-
+#bur{
+    margin-top: 20px;
+}
+h2 {
+    text-shadow: 2px 2px black;
+    padding-bottom: 30px;
+  }

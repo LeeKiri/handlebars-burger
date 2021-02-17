@@ -1,17 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   {{!-- <a class="navbar-brand justfi" href="#">Burgers</a> --}}
-<h1 class="text-center">Burgers!</h1>
+<h1 id="navTitle">Eat-Da-Burger!</h1>
 </nav>
 <div class="container">
     <div class="row">
 
         <div class="col-4" id="Left">
-            <h4>Burgers to Devour</h4>
+            <h2 class="text-white">Burgers to Devour</h2>
 
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                <li>{{this.burger_name}}</li>
+                <li class="text-white">{{this.burger_name}}</li>
                 <button type="button" class="btn btn-info btn-sm">Devour it!</button>
                 {{/unless}}
                 {{/each}}
@@ -21,12 +21,11 @@
         </div>
 
         <div class="col-4" id="middle">
-            <h4>Add a Burger</h4>
-            <img src="../public/assets/burger.jpg" alt="veggie burger" width="500">
+            <h2 class="text-white text-center">Add a Burger</h2>
+            <img src="/assets/burger.jpg" alt="veggie burger" width="340" class="rounded">
             <form id="create-form">
                 <div class="form-group">
-                    <label for="bur">Burger Name:</label>
-                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger" placeholder="Enter burger">
+                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger name" placeholder="Enter burger name">
 
                 </div>
                 <button type="button" class="btn btn-info btn-sm">Add a Burger</button>
@@ -34,12 +33,12 @@
         </div>
 
         <div class="col-4" id="Right">
-            <h4>Devoured Burgers!</h4>
+            <h2 class="text-white">Devoured Burgers!</h2>
 
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <li>{{this.burger_name}}</li>
+                <li class="text-white">{{this.burger_name}}</li>
                 {{/if}}
                 {{/each}}
             </ul>
