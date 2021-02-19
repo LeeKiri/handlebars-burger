@@ -1,23 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  {{!-- <a class="navbar-brand justfi" href="#">Burgers</a> --}}
-<h1 id="navTitle">Eat-Da-Burger!</h1>
-</nav>
+<h1 id="nav">Eat-Da-Burger!</h1>
+
 <div class="container">
     <div class="row">
-
         <div class="col-4" id="Left">
-            <h2 class="text-white">Burgers to Devour</h2>
-
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <li class="text-white">{{this.burger_name}}</li>
-                <button type="button" class="btn btn-info btn-sm devBtn" data-id="{{this.id}}">Devour it!</button>
-                {{/unless}}
-                {{/each}}
-
-            </ul>
-
+                <h2 class="text-white text-center">Burgers to Devour</h2>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <li class="text-white text-center">{{this.burger_name}}</li>
+                    <button type="button" class="btn btn-info btn-sm devBtn" data-id="{{this.id}}">Devour it!</button>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
         </div>
 
         <div class="col-4" id="middle">
@@ -25,21 +19,23 @@
             <img src="/assets/burger.jpg" alt="veggie burger" width="340" class="rounded">
             <form id="create-form">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger name" placeholder="Enter burger name">
+                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger name"
+                        placeholder="Enter burger name">
                 </div>
                 <div class="d-flex justify-content-center">
-                <button type="button" id="addBtn" class="btn btn-info btn-sm justify-content-center">Add a Burger</button>
+                    <button type="button" id="addBtn" class="btn btn-info btn-sm">Add a
+                        Burger</button>
                 </div>
             </form>
         </div>
 
         <div class="col-4" id="Right">
-            <h2 class="text-white">Devoured Burgers!</h2>
+            <h2 class="text-white text-center">Devoured Burgers!</h2>
 
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                <li class="text-white">{{this.burger_name}}</li>
+                <li class="text-white text-center">{{this.burger_name}}</li>
                 {{/if}}
                 {{/each}}
             </ul>

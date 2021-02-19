@@ -5,13 +5,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   const addbtn = document.getElementById("addBtn");
-
   addbtn.addEventListener("click", (e) => {
     const newBurg = {
       burger_name: document.getElementById("bur").value.trim(),
       devoured: 0,
     };
-    console.log("newburg", newBurg);
     fetch(`/api/burgers`, {
       method: "POST",
       headers: {
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       body: JSON.stringify(newBurg),
     }).then((response) => {
-      console.log("fetch initiated");
       if (response.ok) {
         console.log("updated new Burger");
         location.reload("/");
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       fetch(`/api/burgers/${id}`, {
         method: "PUT",
       }).then((res) => {
-        console.log(res);
         console.log(`deleted Burger ${id}`);
         location.reload();
       });

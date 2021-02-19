@@ -19,13 +19,11 @@ const orm = {
 
   updateOne(table, colObj, valObj, cb) {
     const queryString = `UPDATE ${table} SET ? WHERE ?`;
-    console.log(queryString)
-  const statement =  connection.query(queryString, [colObj, valObj], (err, res) => {
+    connection.query(queryString, [colObj, valObj], (err, res) => {
       if (err) throw err;
       cb(res);
-    })
-    console.log(statement.sql)
-  }
+    });
+  },
 };
 
 module.exports = orm;

@@ -11,7 +11,6 @@ const burger = {
   },
 
   updateOne(colObj, valObj, cb){
-      console.log(colObj, valObj)
   orm.updateOne('burgers', colObj, valObj, (res) => cb(res));
   },
 };

@@ -1,32 +1,33 @@
-li{
-    font-size: 25px;
-    padding-bottom: 10px;
-    text-shadow: 2px 2px rgb(53, 52, 52);
-
+li {
+  font-size: 25px;
+  margin: 10px;
+  text-shadow: 2px 2px rgb(53, 52, 52);
+  background-color: rgba(94, 92, 92, 0.712);
+  text-align: center;
 }
-body, html {
-    height: 100%;
-  }
-  
-  .bg {
-    /* The image used */
-    background-image: url("./grey.jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-nav{
-    margin-bottom: 50px;
+.bg {
+  background-image: url("./grey.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#bur{
-    margin-top: 20px;
+#nav {
+  margin-bottom: 50px;
+  background-color: rgb(51, 50, 50);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+#bur {
+  margin-top: 40px;
 }
 h2 {
-    text-shadow: 2px 2px black;
-    padding-bottom: 30px;
-  }
+  background-color: rgba(94, 92, 92, 0.712);
+  text-shadow: 2px 2px black;
+  padding: 20px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
