@@ -6,12 +6,12 @@ const burger = {
     orm.selectAll('burgers', (res) => cb(res));
   },
 
-  insertOne(name, dev, cb) {
-    orm.insertOne('burgers', name, dev, (res) => cb(res));
+  insertOne(col1, col2, name, bool, cb) {
+    orm.insertOne('burgers', col1, col2, name, bool, (res) => cb(res));
   },
 
-  // updateOne(, cb){
-  // orm.selectAll('burgers', (res) => cb(res));
-  // },
+  updateOne(col, devVal, cb){
+  orm.selectAll('burgers', col, devVal, (res) => cb(res));
+  },
 };
 module.exports = burger;

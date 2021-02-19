@@ -12,7 +12,7 @@
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li class="text-white">{{this.burger_name}}</li>
-                <button type="button" class="btn btn-info btn-sm devBtn">Devour it!</button>
+                <button type="button" class="btn btn-info btn-sm devBtn" data-id="{{this.id}}">Devour it!</button>
                 {{/unless}}
                 {{/each}}
 
@@ -28,7 +28,7 @@
                     <input type="text" class="form-control" id="bur" aria-describedby="enter burger name" placeholder="Enter burger name">
                 </div>
                 <div class="d-flex justify-content-center">
-                <button type="button" class="btn btn-info btn-sm justify-content-center">Add a Burger</button>
+                <button type="button" id="addBtn" class="btn btn-info btn-sm justify-content-center">Add a Burger</button>
                 </div>
             </form>
         </div>

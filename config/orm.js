@@ -9,15 +9,25 @@ const orm = {
     });
   },
 
-  insertOne(table, name, dev, cb) {
-    const queryString = `INSERT INTO ? VALUE(?, ?)`;
-    connection.query(queryString, [table, name, dev], (err, res) => {
+  insertOne(table, col1, col2, name, bool, cb) {
+    const queryString = `INSERT INTO ? (?, ?) VALUES (?, ?)`;
+    connection.query(
+      queryString,
+      [table, col1, col2, name, bool],
+      (err, res) => {
+        if (err) throw err;
+        cb(res);
+      }
+    );
+  },
+
+  updateOne(table, col, devVal, cb) {
+    const queryString = `UPDATE ? WHERE ?? SET ??`;
+    connection.query(queryString, [table, col, devVal], (err, res) => {
       if (err) throw err;
       cb(res);
     });
   },
-
-  // updateOne(, cb)
 };
 
 module.exports = orm;
