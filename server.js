@@ -23,16 +23,6 @@ const routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 
-console.log("== Routes:");
-app._router.stack.forEach((r) => {
-  if (r.route && r.route.path) {
-    console.log(r.route.path);
-  } else {
-    console.log(r.stack);
-  }
-});
-console.log(routes);
-
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () =>
   console.log(`Server listening on: http://localhost:${PORT}`)
