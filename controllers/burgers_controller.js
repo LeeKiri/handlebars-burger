@@ -15,9 +15,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
+  console.log(req.body);
   burger.insertOne(
-    ["col1", "col2", "name", "bool"],
-    ["burger_name", "devoured", req.body.burger_name, req.body.devoured],
+    ["burger_name", "devoured"],
+    [req.body.burger_name, req.body.devoured],
     (result) => {
       // Send back the ID of the new quote
       console.log("this is the body", req.body);
@@ -27,12 +28,10 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-  console.log("devoured", devoured);
   burger.updateOne(
-    ["col", "devVal"],
+    { devoured: 1 },
     {
       id: req.params.id,
-      devoured: true,
     },
     (result) => {
       if (result.changedRows == 0) {

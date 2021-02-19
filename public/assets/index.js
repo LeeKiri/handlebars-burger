@@ -9,12 +9,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
   addbtn.addEventListener("click", (e) => {
     const newBurg = {
       burger_name: document.getElementById("bur").value.trim(),
-      devoured: false,
+      devoured: 0,
     };
+    console.log("newburg", newBurg);
     fetch(`/api/burgers`, {
       method: "POST",
       headers: {
-        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(newBurg),
     }).then((response) => {
@@ -29,16 +30,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   const devBtn = document.querySelectorAll(".devBtn");
+  for (var i = 0; i < devBtn.length; i++) {
+    devBtn[i].addEventListener("click", (e) => {
+      const id = e.target.getAttribute("data-id");
 
-  devBtn.addEventListener("click", (e) => {
-    const id = e.target.getAttribute("data-id");
-
-    fetch(`/api/burgers/${id}`, {
-      method: "PUT",
-    }).then((res) => {
-      console.log(res);
-      console.log(`deleted Burger ${id}`);
-      location.reload();
+      fetch(`/api/burgers/${id}`, {
+        method: "PUT",
+      }).then((res) => {
+        console.log(res);
+        console.log(`deleted Burger ${id}`);
+        location.reload();
+      });
     });
-  });
+  }
 });
