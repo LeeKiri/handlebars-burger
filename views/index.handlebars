@@ -2,13 +2,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-4" id="Left">
+        <div class="col-4 text-center" id="Left">
                 <h2 class="text-white text-center">Burgers to Devour</h2>
                 <ul>
                     {{#each burgers}}
                     {{#unless devoured}}
                     <li class="text-white text-center">{{this.burger_name}}</li>
-                    <button type="button" class="btn btn-info btn-sm devBtn" data-id="{{this.id}}">Devour it!</button>
+                    <button type="button" class="btn btn-info btn-sm devBtn text-center" data-id="{{this.id}}">Devour it!</button>
                     {{/unless}}
                     {{/each}}
                 </ul>
@@ -16,10 +16,10 @@
 
         <div class="col-4" id="middle">
             <h2 class="text-white text-center">Add a Burger</h2>
-            <img src="/assets/burger.jpg" alt="veggie burger" width="340" class="rounded">
+            <img src="/assets/burger.jpg" alt="veggie burger" width="350" class="rounded">
             <form id="create-form">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="bur" aria-describedby="enter burger name"
+                    <input type="text" class="form-control text-center" id="bur" aria-describedby="enter burger name"
                         placeholder="Enter burger name">
                 </div>
                 <div class="d-flex justify-content-center">
