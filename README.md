@@ -2,7 +2,7 @@
 This project uses node, express and handlebars to make a restaurant app that lets users input the names of burgers they'd like to eat.
 
  ## Description 
-    In this project I use the MCV design pattern to create a interactive app where users can log burgers. I wrote an ORM to query the database, used handlebars to generate HTML and deployed the project to Heroku. 
+    In this project I use the MVC design pattern to create a interactive app where users can log burgers. I wrote an ORM to query the database, used handlebars to generate HTML and deployed the project to Heroku. 
 
 ---
 | Table of Contents |
